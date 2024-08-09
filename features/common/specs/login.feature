@@ -1,8 +1,8 @@
 # language: pt
 
 Funcionalidade: Login
-  Eu como QA da RD
-  Quero garantir a qualidade dos cenários referente a Login
+  Como um QA estou buscando conhecimento em novas tecnologias
+  Decidi aprender um pouco sobre PlayWright
 
   @login_valido
   Cenário: Login Valido
