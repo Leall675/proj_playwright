@@ -7,15 +7,18 @@ require_relative 'page_objects'
 
 World(PageObjects)
 
-Capybara.register_driver(:playwright) do |app|
-  Capybara::Playwright::Driver.new(app,
-    browser_type: :chromium,
-    headless: false
-  )
+HEADLESS = ENV.fetch('HEADLESS', false)
+
+Capybara.register_driver :playwright do |app|
+  if HEADLESS
+    Capybara::Playwright::Driver.new(app, browser_type: :chromium, headless: true)
+  else
+    Capybara::Playwright::Driver.new(app, browser_type: :chromium, headless: HEADLESS, viewport: {width: 1980, height: 1080})
+  end
 end
 
 Capybara.configure do |config|
   config.default_driver = :playwright
-  config.app_host = 'https://grupordqa.service-now.com/login.do'
+  config.app_host = 'https://www.amazon.com.br/'
   config.default_max_wait_time = 10
 end
