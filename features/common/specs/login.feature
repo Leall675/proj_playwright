@@ -6,6 +6,6 @@ Funcionalidade: Login
 
   @login_valido
   Cenário: Login Valido
-    Dado que informo usuario '#######' e senha '######'
+    Dado que informo usuario 'lealdasilva2022@hotmail.com' e senha 'Matheus675303327.'
     Quando clico em logar
     Então efetuo login com sucesso

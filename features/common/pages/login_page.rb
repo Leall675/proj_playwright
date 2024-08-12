@@ -2,9 +2,11 @@ class LoginPage < SitePrism::Page
   include LoginModule
   set_url ''
 
-    element :username,  '[name="user_name"]'
-    element :password,  '[name="user_password"]'
-    element :logar,  'button[type=submit]'
+    element :btnFacaLogin,        '#nav-link-accountList'
+    element :username,            '#ap_email'
+    elements :btnContinuar,       '#continue'
+    element :password,            '#ap_password'
+    element :btnLogar,            '#signInSubmit'
 
     element :btnTodos, :xpath, "//div[text()='Todos']"
     element :todos, :xpath, '//*[contains(text(), "Todos")]'

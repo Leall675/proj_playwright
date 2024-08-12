@@ -13,7 +13,7 @@ Capybara.register_driver :playwright do |app|
   if HEADLESS
     Capybara::Playwright::Driver.new(app, browser_type: :chromium, headless: true)
   else
-    Capybara::Playwright::Driver.new(app, browser_type: :chromium, headless: HEADLESS, viewport: {width: 1980, height: 1080})
+    Capybara::Playwright::Driver.new(app, browser_type: :chromium, headless: HEADLESS, viewport: {width: 1296, height: 1296})
   end
 end
 
